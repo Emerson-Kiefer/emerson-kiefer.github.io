@@ -14,15 +14,16 @@ body {
   background-color: rgb(34,34,34);
   color: rgb(225, 222, 222);
   font-family: Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 main {
   display: grid;
-}
-
-.page {
-  height: 100svh;
-  border-bottom: 1px solid #ccc;
 }
 
 
@@ -46,7 +47,6 @@ main {
   .nav-bar ul{
     display: flex;
     align-items: center;
-    list-style-type: none;
     margin: 0;
     padding: 0;
   }
@@ -85,34 +85,29 @@ main {
   }
 
 /* || Home Styles */
-  /* .home-page {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    display: grid;
-    box-sizing: border-box;
-    padding: 20vh;
-  } */
-   #home-page {
+   .home-page {
     height: calc(100svh - var(--header-height));
     width: 100vw;
     display: grid;
     justify-content: center;
     grid-template-columns: 0.5fr repeat(7, minmax(0, 1fr)) 0.5fr;
     grid-template-rows: 0.5fr repeat(7, minmax(0, 1fr)) 0.5fr;
+    border-bottom: 1px solid #ccc;
    }
 
-  .home-image {
+  img.home-image {
     grid-column: 2 / 8;
     grid-row: 2 / 9;
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 4vw;
+    filter: drop-shadow(0 0 0.75rem rgb(10,10,10));
+    z-index: -1;
   }
 
-  #home-page h1{
+
+  .home-name {
     font-family: American Typewriter, serif;
     font-weight: lighter;
     text-transform: lowercase;
@@ -120,15 +115,50 @@ main {
     font-size: min(10vw, 14vh);
     height: 100%;
     margin: 0;
-  }
-
-  .home-name {
     grid-column: 6 / 9;
     grid-row: 4 / 7;
   }
 
+/* || Generic Scrolling Page Styles */
+  .content-page {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100svh;
+    border-bottom: 1px solid #ccc;
+    scrollbar-width: none;
+  }
+
+  /* .content-cards {
+
+
+  } */
+
+  .content-cards li {
+    display: inline-block;
+    padding-inline: 5vw;
+    width: 20vw;
+    height: 55svh;
+    cursor: grab;
+  }
+
+  
+/* || Project Styles */
+
+  .content-cards img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+/* || Footer Style*/
 
   footer {
     position:relative;
 
   }
+ 
