@@ -3,7 +3,7 @@
 # TODO:
 
 ## Header
-1. Make hammburger menu button for small screen sizes
+1. Make hamburger menu button for small screen sizes
 2. Make hamburger dropdown
 
 ## Cutom Scrollbar

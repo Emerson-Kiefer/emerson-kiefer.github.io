@@ -3,8 +3,11 @@
 
 } */
 
+
+
 :root {
-  --header-height: 15svh;
+  --header-height: 15vh;
+  scroll-behavior: smooth;
 }
 
 /* || General Styles */
@@ -15,9 +18,10 @@ body {
   color: rgb(225, 222, 222);
   font-family: Verdana, sans-serif;
   overflow-x: hidden;
+  /* overflow-y: hidden; */
 }
 
-ul {
+ul, ol {
   list-style-type: none;
   padding: 0;
 }
@@ -74,19 +78,46 @@ main {
     padding-inline: 5px;
   }
 
-  .h-button {
+
+  .compact-nav, .compact-nav-pane, #open-compact-nav{
     display: none;
   }
 
   @media only screen and (max-width: 950px) {
-    .h-button {
+    .compact-nav {
       display: block;
+    }
+    #compact-nav-label span {
+      display: block;
+      height: 5px;
+      width: 40px;
+      background-color: white;
+      color: white;
+      margin: 5px 0px 5px 0px;
+      transition: 0.4s ease-in-out;
+      transform: none;
+    }
+
+    #open-compact-nav:checked ~ #compact-nav-label span:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    #open-compact-nav:checked ~ #compact-nav-label span:nth-of-type(1) {
+      transform: matrix(0.71,0.71,-0.71,0.71,0,10);
+    }
+
+    #open-compact-nav:checked ~ #compact-nav-label span:nth-of-type(3) {
+      transform: matrix(0.71,-0.71,0.71,0.71,0,-10);
+    }
+
+    .internal-nav-list li {
+      display: none;
     }
   }
 
 /* || Home Styles */
    .home-page {
-    height: calc(100svh - var(--header-height));
+    height: calc(100dvh - var(--header-height));
     width: 100vw;
     display: grid;
     justify-content: center;
@@ -112,7 +143,7 @@ main {
     font-weight: lighter;
     text-transform: lowercase;
     text-shadow: #FC0 1px 0 10px;
-    font-size: min(10vw, 14vh);
+    font-size: min(10vw, 14dvh);
     height: 100%;
     margin: 0;
     grid-column: 6 / 9;
@@ -126,7 +157,7 @@ main {
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    height: 100svh;
+    height: 100dvh;
     border-bottom: 1px solid #ccc;
     scrollbar-width: none;
   }
@@ -136,22 +167,59 @@ main {
 
   } */
 
-  .content-cards li {
+  .content-list li {
     display: inline-block;
     padding-inline: 5vw;
-    width: 20vw;
-    height: 55svh;
     cursor: grab;
   }
+
+  div.content-card {
+    width: 20vw;
+    height: 55dvh;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+  }
+  /* .content-cards div {
+    display: grid;
+    width: 100%;
+    height: 100%;
+  } */
+
 
   
 /* || Project Styles */
 
-  .content-cards img{
+  .content-card img{
+    grid-row: 1 / span 4;
+    grid-column: 1 / span 3;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
+  .content-card h1 {
+    grid-row: 3;
+    grid-column: 3;
+    font-size: min(5vw, 3dvh);
+    white-space: wrap;
+  }
+
+  .content-card h2 {
+    display: none;
+  }
+
+  .content-card h6 {
+    grid-row: 1;
+    grid-column: 4;
+  }
+
+  .content-card button{
+    all: unset;
+    color: inherit;
+
+  }
+
 
 
 

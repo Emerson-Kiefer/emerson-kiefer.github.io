@@ -39,13 +39,17 @@
               <a href="#about-page">About</a>
             </li>
           </ul>
-          <button class="h-button">
-            <ul class="h-button-list">
+          <div class="compact-nav">
+            <input type="checkbox" id="open-compact-nav" class=""/>
+            <label for="open-compact-nav" id="compact-nav-label">
               <span></span>
               <span></span>
               <span></span>
-            </ul>
-          </button>
+            </label>
+            <div class="compact-nav-pane">
+              <h1>Hello world</h1>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -57,64 +61,103 @@
         <!-- <h2>Alternating text</h2> Alternating text (Aspiring software engineer. Mentor. etc) -->
       </section>
       <section id="project-page" class="content-page">
-        <ul id="project-cards" class="content-cards">
+        <ul id="project-cards" class="content-list">
           <li class="project-card-1">
-            <img src="images/project/ethan-garvey-9R57cxUOXcE-unsplash.jpg"/>
-            <h1>The Unscrambler</h1>
-            <h2>01</h2>
-            <h3>Solving Machine</h3>
-            <button class="view-content">View</button>
+            <div class="content-card">
+              <img src="images/project/ethan-garvey-9R57cxUOXcE-unsplash.jpg"/>
+              <h1>The Unscrambler</h1>
+              <h2>Solving Machine</h2>
+              <h6>01</h6>
+              <button class="view-content">
+                <u>View</u>
+              </button>
+            </div>
           </li>
           <li class="project-card-2">
-            <img src="images/project/laura-cleffmann-rL6q_Y5uBLs-unsplash.jpg"/>
-            <h1>GID</h1>
-            <h2>02</h2>
-            <h3>Web Application</h3>
-            <button class="view-content">View</button>
+            <div class="content-card">
+              <img src="images/project/laura-cleffmann-rL6q_Y5uBLs-unsplash.jpg"/>
+              <h1>GID</h1>
+              <h2>Web Application</h2>
+              <h6>02</h6>
+              <button class="view-content">
+                <u>View</u>
+              </button>
+            </div>
           </li>
-          <li>
-            <img src="images/project/karl-hornfeldt-i4UcdpKoA9c-unsplash.jpg"/>
-            <h1>Genre Classification</h1>
-            <h2>03</h2>
-            <h3>Research Paper & Model</h3>
-            <button class="view-content">View</button>
+          <li class="project-card-3">
+            <div class="content-card">
+              <img src="images/project/karl-hornfeldt-i4UcdpKoA9c-unsplash.jpg"/>
+              <h1>Genre Classification</h1>
+              <h2>Research Paper & Model</h2>
+              <h6>03</h6>
+              <button class="view-content">
+                <u>View</u>
+              </button>
+            </div>
           </li>
-          <li>
-            <img src="images/project/samuele-errico-piccarini-t4OxCpKie70-unsplash.jpg"/>
-            <h1>ElENa System</h1>
-            <h2>04</h2>
-            <h3>Application</h3>
-            <button class="view-content">View</button>
+          <li class="project-card-4">
+            <div class="content-card">
+              <img src="images/project/samuele-errico-piccarini-t4OxCpKie70-unsplash.jpg"/>
+              <h1>ElENa System</h1>
+              <h2>Application</h2>
+              <h6>04</h6>
+              <button class="view-content">
+                <u>View</u>
+              </button>
+            </div>
           </li>
         </ul>
       </section>
       <section id="work-page" class="content-page">
-        <ul id="work-cards" class="content-cards">
+        <ul id="work-cards" class="content-list">
           <li>
-            <img src="images/work/emil-widlund-ZtI4l8EvyUw-unsplash.jpg"/>
-            <h1>Teaching Assistant</h1>
-            <h2>01</h2>
-            <h3>UMASS Amherst</h3>
+            <div class="content-card">
+              <img src="images/work/emil-widlund-ZtI4l8EvyUw-unsplash.jpg"/>
+              <h1>Teaching Assistant</h1>
+              <h2>UMASS Amherst</h2>
+              <h6>01</h6>
+              <button class="view-content">
+                <u>View</u>
+              </button>
+            </div>
           </li>
           <li>
-            <img src="images/work/gavin-spear-ymJt1_jLreY-unsplash.jpg"/>
-            <h1>Junior Cloud Infrastructure Engineer</h1>
-            <h2>02</h2>
-            <h3>Verint</h3>
+            <div class="content-card">
+              <img src="images/work/gavin-spear-ymJt1_jLreY-unsplash.jpg"/>
+              <h1>Junior Cloud Infrastructure Engineer</h1>
+              <h2>Verint</h2>
+              <h6>02</h6>
+              <button class="view-content">
+                <u>View</u>
+              </button>
+            </div>
           </li>
           <li>
-            <img src="images/work/massimo-botturi-zFYUsLk_50Y-unsplash.jpg"/>
-            <h1>Release Engineering Intern</h1>
-            <h2>03</h2>
-            <h3>UKG</h3>
+            <div class="content-card">
+              <img src="images/work/massimo-botturi-zFYUsLk_50Y-unsplash.jpg"/>
+              <h1>Release Engineering Intern</h1>
+              <h2>UKG</h2>
+              <h6>03</h6>
+              <button class="view-content">
+                <u>View</u>
+              </button>
+            </div>
           </li>
           <li>
-            <img src="images/work/taylor-GbdJqpft8X0-unsplash.jpg"/>
-            <h1>Software Engineering Intern</h1>
-            <h2>04</h2>
-            <h3>Gentle Giant</h3>
+            <div class="content-card">
+              <img src="images/work/taylor-GbdJqpft8X0-unsplash.jpg"/>
+              <h1>Software Engineering Intern</h1>
+              <h2>Gentle Giant</h2>
+              <h6>04</h6>
+              <button class="view-content">
+                <u>View</u>
+              </button>
+            </div>
           </li>
-        </uL>
+        </ul>
+      </section>
+      <section id="education-page" class="content-page">
+        <h1>Education</h1>
       </section>
       <section id="about-page" class="content-page">
         <h1>About!</h1>
@@ -126,8 +169,3 @@
     </footer>
   </body>
 </html>
-
-<!--  width max = 24
-      height max = 80
-      width min = 3/8 = 9
-      height min = 2/10 = 16-->
